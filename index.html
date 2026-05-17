@@ -1,15 +1,8 @@
-<!DOCTYPE <html>
-
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Mobile SEO -->
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-    <!-- "defer" permet de ne pas bloquer l'affichage de la page -->
-
-    <!-- SEO optimization -->
     <title>Ultimate Daily Checklist | Boost Your Productivity</title>
     <meta
       name="description"
@@ -22,6 +15,12 @@
       content="The simplest way to manage your daily tasks."
     />
     <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Single deferred script -->
+    <script src="script.js" defer></script>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -34,42 +33,47 @@
         "url": "https://www.ultimatedailychecklist.com"
       }
     </script>
-    <script src="/script.js"></script>
   </head>
   <body>
+    <header>
+      <h1>Ultimate Daily Checklist</h1>
+      <p>
+        Track your <strong>productivity</strong> and manage
+        <strong>daily tasks</strong> efficiently.
+      </p>
+    </header>
+
     <main>
-      <article>
-        <header>
-          <h1>Ultimate Daily Checklist</h1>
-          <p>
-            Track your <strong>productivity</strong> and manage
-            <strong>daily tasks</strong> efficiently.
-          </p>
-        </header>
-        <section id="app-container">
-          <!-- Accessibility : labels are crucial for SEO & UX -->
+      <section id="app-container">
+        <!-- Replaced loose inputs with a semantic form -->
+        <form id="task-form">
           <label for="new-task">Add a new task:</label>
           <input
             type="text"
             id="new-task"
-            placeholder="finish SEO report"
-            aria-label="New task description"
+            placeholder="e.g., finish SEO report"
+            required
           />
-          <button type="button">Add task</button>
-          <ul id="task-list">
-            <!-- Standard list items for crawlers to understand the structure -->
-            <li>
-                <input type="checkbox" id="task1" />
-                <label for="task1">Research keywords for SEO</label>
-            </li>
-          </ul>
-      </article>
+          <button type="submit">Add task</button>
+        </form>
+
+        <!-- Added aria-live to announce dynamic changes -->
+        <ul id="task-list" aria-live="polite" role="list">
+          <li>
+            <input type="checkbox" id="task1" />
+            <label for="task1">Research keywords for SEO</label>
+          </li>
+        </ul>
       </section>
 
-      <!-- Content section for SEO keywords and user engagement -->
       <section class="content-info">
         <h2>Why Use a Daily Task Manager?</h2>
-<p>Using a <strong>productivity checklist</strong> helps reduce mental clutter and ensures you never miss a deadline. Our tool is designed for <em>speed</em> and <em>simplicity</em>.</p>
+        <p>
+          Using a <strong>productivity checklist</strong> helps reduce mental
+          clutter and ensures you never miss a deadline. Our tool is designed
+          for <em>speed</em> and <em>simplicity</em>.
+        </p>
+      </section>
     </main>
 
     <footer>
