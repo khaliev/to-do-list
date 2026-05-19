@@ -46,24 +46,20 @@
     <main>
       <section id="app-container">
         <!-- Replaced loose inputs with a semantic form -->
-        <form id="task-form">
-          <label for="new-task">Add a new task:</label>
+
+        <form>
+          <label for="task-input">Add a new Task:</label>
           <input
             type="text"
-            id="new-task"
-            placeholder="e.g., finish SEO report"
-            required
+            id="task-input"
+            name="task-input"
+            placeholder="Add a new task..."
           />
-          <button type="submit">Add task</button>
+          <button type="submit">Add Task</button>
         </form>
 
         <!-- Added aria-live to announce dynamic changes -->
-        <ul id="task-list" aria-live="polite" role="list">
-          <li>
-            <input type="checkbox" id="task1" />
-            <label for="task1">Research keywords for SEO</label>
-          </li>
-        </ul>
+        <ul id="task-list" aria-live="polite" role="list"></ul>
       </section>
 
       <section class="content-info">
