@@ -8,16 +8,22 @@
 }
 
 body {
-  background: #f0f0f0;
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: flex-start; /* Start from top */
-  align-items: center;
-  min-height: 100vh; /* Use min-height instead of height */
   font-family: "Montserrat", sans-serif;
+  background: #f0ecec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Use min-height instead of height */
+
   padding: 20px;
 }
 
+header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
 /* Main content wrapper */
 main {
   width: 100%;
@@ -52,4 +58,50 @@ header h1 {
 header p {
   color: #666;
   font-size: 1.1em;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.add-btn {
+  background: #237532;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  font-size: small;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  color: rgb(184, 182, 182);
+  text-align: center;
+  padding: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  .footer {
+    position: fixed;
+  }
 }

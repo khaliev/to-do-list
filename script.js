@@ -1,4 +1,4 @@
-// Select we're selecting DOM elements
+// We're selecting DOM elements
 const newTaskInput = document.getElementById("task-input");
 const addTaskButton = document.querySelector("button");
 
