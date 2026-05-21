@@ -63,26 +63,45 @@ header p {
 input {
   width: 100%;
   padding: 12px 15px;
-  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1em;
 }
+
+#task-input:focus {
+  border-color: #237532;
+  outline: none;
+}
+
+#app-container form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .add-btn {
   background: #237532;
+  color: white;
+  border: none;
+  font-size: large;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.delete-btn {
+  display: inline-flex;
+  background: #b44236;
   color: white;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
 }
-.delete-btn {
-  background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
+
+#task-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .footer {
@@ -95,6 +114,20 @@ input {
   color: rgb(184, 182, 182);
   text-align: center;
   padding: 12px;
+}
+
+.content-info {
+  text-align: left;
+  display: inline;
+  margin-top: 2rem;
+  color: #555;
+  font-size: 0.9em;
+}
+
+#task-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 @media screen and (max-width: 600px) {

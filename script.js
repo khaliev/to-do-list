@@ -8,8 +8,9 @@ const taskList = document.querySelector("#task-list");
 function addTask(taskText) {
   // Create a new list item for the task
   const listItem = document.createElement("li");
+  const id = `task-${Date.now()}`;
   // Here we create the list item with a checkbox, task text, and delete button
-  listItem.innerHTML = `<input type="checkbox" id="task1" /> <span>${taskText}</span> <button class="delete-btn">Delete</button>`;
+  listItem.innerHTML = `<input type="checkbox" id="${id}" /> <label for="${id}" class="task-label">${taskText}</label> <button class="delete-btn" aria-label="Delete task">Delete</button>`;
   // Here we append // add the new list item to the task list
   taskList.appendChild(listItem);
   // Clear the input field after adding a task
